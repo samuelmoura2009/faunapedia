@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="arquivos/logo.png"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babuíno - Faunapedia</title>
+    <style>
+        /* Estilos gerais para um visual minimalista */
+        body {
+            font-family: Segoe UI;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+            /* REMOVIDO o padding daqui */
+        }
+
+        /* --- ESTILOS DO CABEÇALHO --- */
+        .site-header {
+            background-color: #065225; /* Verde mar */
+            color: white;
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* REMOVIDA a margem de baixo */
+        }
+        
+        .site-title-link {
+            text-decoration: none;
+            color: inherit;
+             font-size: 30px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+        
+        .search-form {
+            flex-grow: 1; 
+            display: flex;
+            justify-content: center; 
+        }
+
+        .search-form input {
+            width: 80%;
+            max-width: 450px;
+            padding: 9.6px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* --- NOVO WRAPPER PARA O CONTEÚDO --- */
+        .page-content {
+            padding: 32px; /* ADICIONADO o padding aqui */
+        }
+
+        /* Container principal para o layout de duas colunas */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            max-width: 900px;
+            margin: auto;
+            align-items: flex-start;
+        }
+
+        /* Caixa cinza da esquerda */
+        .sidebar {
+            flex: 1;
+            min-width: 280px;
+            background-color: #ffffff;
+            padding: 24px;            
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .sidebar img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .sidebar h2 {
+            margin-top: 16px;
+            margin-bottom: 0.16px;
+            font-size: 24px;
+        }
+        .sidebar .family-name {
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-size: 19.2px;
+            color: #555;
+        }
+        .taxonomy-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+        .taxonomy-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 4.8px 0;
+            border-bottom: 1px solid #ddd;
+            font-size: 14.4px;
+            color: #2b5737;
+        }
+        .taxonomy-list li span:last-child {
+            font-weight: bold;
+        }
+        .main-content {
+            flex: 3;
+            min-width: 300px;
+        }
+        .main-content p {
+            margin-bottom: 16px;
+        }
+        .divisao {
+            border: none;
+            border-bottom: 1px solid #ddd;
+            margin: 12px 0;
+        }
+        .lista-especies {
+            text-align: left;
+            padding-left: 16px;
+            list-style-type: disc;            
+        }
+
+        .lista-especies a {
+         text-decoration: none;
+        }
+
+        .taxonomy-list a {
+    text-decoration: none;
+}
+
+       .animal-foto {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+     <a href="pagina.html" class="site-title-link" >Faunapedia</a>
+    <form class="search-form">
+        <input type="search" placeholder="Pesquisar...">
+    </form>
+</header>
+
+<!-- ADICIONADO UM WRAPPER PARA APLICAR O PADDING -->
+<main class="page-content">
+    <div class="container">
+        <!-- Coluna da Esquerda com a Caixa Cinza -->
+        <aside class="sidebar">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Olive_baboon_Ngorongoro.jpg/800px-Olive_baboon_Ngorongoro.jpg" alt="Foto de um babuíno" class="animal-foto">
+            <h2>Babuíno</h2>
+            <em><p class="family-name">Papio</p></em>
+            <ul class="taxonomy-list">
+                <li><span>Domínio:</span> <span>Eukaryota</span></li>
+                <li><span>Reino:</span> <span>Animalia</span></li>
+                <li><span>Filo:</span> <span>Chordata</span></li>
+                <li><span>Classe:</span> <a href="mammalia.html"><span>Mammalia</a></span></li>
+                <li><span>Ordem:</span> <span><a href="primates.html">Primates</a></span></li>
+                <li><span>Subordem:</span> <span>Haplorhini</span></li>
+                <li><span>Infraordem:</span> <span>Simiiformes</span></li>
+                <li><span>Família:</span> <span>Cercopithecidae</span></li>
+                <li><span>Gênero:</span> <span>Papio</span></li>
+            </ul>
+           <p><b>Região Geográfica:</b></p>
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPXN0UbJmLS-vgqOYYz5JMGxYjYDA2XQObsVzgCfK86gNLfGvmUYcXgpjdh_8OI7ACFlaOjlXpNZBZlBBQZ6NnJq615YBecp6_QWOEYZCtHCm3ARy-cTJK7ItvIcQX_BvLSfvEzLiXEUI/s1600/FIG-URE-1-Distribution-of-the-six-Papio-species-Species-distributions-are-modified-from.png" alt="Mapa da distribuição dos babuínos" style="margin-top: 10px;">
+            
+           <hr class="divisao">
+
+           <p><b>Espécies:</b></p>
+           <ul class="lista-especies">
+               <li><a href="">Papio papio</a></li>
+               <li><a href="">Papio anubis</a></li>
+               <li><a href="babuinoHamadryas.html">Papio hamadryas</a></li>
+               <li><a href="">Papio cynocephalus</a></li>
+               <li><a href="">Papio kindae</a></li>
+               <li><a href="">Papio ursinus</a></li>
+           </ul>
+        </aside>
+
+        <!-- Coluna da Direita com o Texto -->
+        <main class="main-content">
+            <h1>Babuíno</h1>
+            <p>O babuíno é um primata pertencente ao gênero Papio, encontrado principalmente em regiões da África e da Península Arábica. Conhecido por sua aparência marcante, comportamento social complexo e grande adaptabilidade, o babuíno é um dos macacos mais estudados pela ciência.</p>
+            <p>Existem cinco espécies principais de babuínos: o babuíno-amarelo, o babuíno-verde, o babuíno-das-savanas (ou chacma), o babuíno-sagrado (ou hamadryas) e o babuíno-guiné. Eles variam em tamanho, cor e hábitos, mas compartilham muitas características em comum.</p>
+            <p>Esses primatas vivem em grandes grupos sociais chamados tropas, que podem contar com dezenas ou até centenas de indivíduos. As tropas têm uma hierarquia bem definida, especialmente entre os machos, e a convivência é marcada por interações sociais complexas, como alianças, disputas e cuidados entre os membros.</p>
+            <p>Os babuínos são onívoros, o que significa que se alimentam tanto de vegetais quanto de pequenos animais. Sua dieta inclui frutas, sementes, raízes, insetos e até pequenos vertebrados. Essa diversidade alimentar contribui para sua ampla distribuição geográfica, já que eles conseguem sobreviver em diferentes ambientes, como savanas, florestas, desertos e regiões montanhosas.</p>
+            <p>Fisicamente, os babuínos são robustos, com mandíbulas fortes e dentes caninos proeminentes, especialmente nos machos. Suas nádegas têm calosidades chamadas de "áreas isquiáticas", que facilitam o sentar em superfícies duras por longos períodos. Em algumas espécies, como o babuíno-hamadryas, os machos apresentam uma juba impressionante ao redor da cabeça e dos ombros.</p>
+            <p>Apesar de sua aparência intimidadora, os babuínos também demonstram comportamentos afetuosos, como o cuidado parental e a prática de higiene mútua, que fortalece os laços sociais dentro do grupo.</p>
+            <p>Infelizmente, os babuínos enfrentam ameaças crescentes devido à perda de habitat, caça e conflitos com humanos, especialmente em áreas agrícolas. Ainda assim, eles são espécies resilientes e, em sua maioria, não estão atualmente ameaçados de extinção.</p>
+        </main>
+    </div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="arquivos/logo.png"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felinos - Faunapedia</title>
+    <style>
+        /* Estilos gerais para um visual minimalista */
+        body {
+            font-family: Segoe UI;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+        }
+
+        /* --- ESTILOS DO CABEÇALHO --- */
+        .site-header {
+            background-color: #065225;
+            color: white;
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .site-title-link {
+            text-decoration: none;
+            color: inherit;
+             font-size: 30px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+        
+        .search-form {
+            flex-grow: 1; 
+            display: flex;
+            justify-content: center; 
+        }
+
+        .search-form input {
+            width: 80%;
+            max-width: 450px;
+            padding: 9.6px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* --- WRAPPER PARA O CONTEÚDO --- */
+        .page-content {
+            padding: 32px;
+        }
+
+        /* Container principal para o layout de duas colunas */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            /* --- ESTA É A CORREÇÃO CRUCIAL --- */
+            display: flow-root; /* Garante que o container contenha o float */
+        }
+
+        /* Caixa da esquerda */
+        .sidebar {
+            width: 280px;
+            background-color: #ffffff;
+            padding: 24px;            
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            float: left; 
+            margin-right: 32px;
+            margin-bottom: 24px;
+        }
+        
+        .animal-foto {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .sidebar img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .sidebar h2 {
+            margin-top: 16px;
+            margin-bottom: 0.16px;
+            font-size: 24px;
+        }
+        .sidebar .family-name {
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-size: 19.2px;
+            color: #555;
+        }
+        .taxonomy-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+        .taxonomy-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 4.8px 0;
+            border-bottom: 1px solid #ddd;
+            font-size: 14.4px;
+            color: #2b5737;
+        }
+        .taxonomy-list li span:last-child {
+            font-weight: bold;
+        }
+
+        .lista-especies {
+            text-align: left;
+            padding-left: 16px;
+            list-style-type: disc;
+        }
+
+        /* NOVO ESTILO ADICIONADO PARA O ANINHAMENTO */
+        .lista-especies ul {
+            padding-left: 15px; /* Adiciona recuo para sub-listas */
+            margin-top: 4px;
+            list-style-type: disc;
+        }
+
+        .lista-especies a {
+         text-decoration: none;
+        }
+
+        .taxonomy-list a {
+            text-decoration: none;
+        }
+       
+        .main-content p, .main-content h3 {
+             margin-top: 0; /* Evita margens estranhas no topo do texto */
+        }
+
+        .divisao {
+            border: none;
+            border-bottom: 1px solid #ddd;
+            margin: 12px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <a href="pagina.html" class="site-title-link" >Faunapedia</a>
+    <form class="search-form">
+        <input type="search" placeholder="Pesquisar...">
+    </form>
+</header>
+
+<main class="page-content">
+    <div class="container">
+        <!-- Coluna da Esquerda com a Caixa Cinza -->
+        <aside class="sidebar">
+           <img src="https://i.redd.it/0rje91fxbakf1.jpeg" alt="Foto de felinos" class="animal-foto">
+           
+            <h2>Felinos</h2>
+            <em><p class="family-name">Felidae</p></em>
+            
+            <ul class="taxonomy-list">
+                <li><span>Domínio:</span> <span>Eukaryota</span></li>
+                <li><span>Reino:</span> <span>Animalia</span></li>
+                <li><span>Filo:</span> <span>Chordata</span></li>
+                <li><span>Classe:</span> <a href="mammalia.html"><span>Mammalia</a></span></li>
+                <li><span>Ordem:</span> <span>Carnivora</span></li> 
+                <li><span>Família:</span> <span>Felidae</span></li>             
+            </ul>
+           <p><b>Região Geográfica:</b></p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Felinae_range.png" alt="Mapa da distribuição dos babuínos" style="margin-top: 10px;">
+
+           <hr class="divisao">
+
+            <p><b>Famílias e Classificações:</b></p>
+            
+            <ul class="lista-especies">
+                <li>Subfamília Pantherinae
+                    <ul>
+                        <li>Panthera</li>
+                        <li>Neofelis</li>
+                    </ul>
+                </li>
+                <li>Subfamília Felinae
+                    <ul>
+                        <li>Acinonyx</li>
+                        <li>Caracal</li>
+						<li>Catopuma</li>
+						<li>Felis</li>
+						<li>Herpailurus</li>
+						<li>Leopardus</li>
+						<li>Leptailurus</li>
+						<li>Lynx</li>
+                        <li>Otocolobus</li>
+                        <li>Pardofelis</li>
+                        <li>Prionailurus</li>
+                        <li>Puma</li>
+                        <li>Profelis</li>
+                    </ul>
+                </li>
+                
+            </ul>
+            
+
+        </aside>
+
+        
+        <main class="main-content">
+            <h1>Felinos</h1>
+            
+           <p>Os felinos são mamíferos carnívoros que pertencem à família Felidae, um grupo de animais amplamente conhecido por suas habilidades de caça, agilidade física e sentidos extremamente desenvolvidos. Essa família inclui desde os maiores predadores terrestres, como o tigre e o leão, até espécies menores e mais discretas, como o gato-doméstico e os pequenos gatos selvagens encontrados em diversos continentes. Independentemente do porte, todos os felinos compartilham certas características físicas e comportamentais que os tornam caçadores eficientes e bem adaptados aos seus respectivos habitats.</p>
+
+            <p>Entre as principais características dos felinos estão as garras retráteis, que permanecem protegidas quando não estão em uso, permitindo que se mantenham afiadas. Eles também possuem visão noturna altamente desenvolvida, essencial para a caça em ambientes de baixa luminosidade, além de audição e olfato aguçados. Sua dentição é especializada para capturar, matar e consumir presas, com dentes caninos longos e molares adaptados para cortar carne. O corpo dos felinos é geralmente musculoso, esguio e muito flexível, o que permite movimentos precisos, saltos poderosos e grande velocidade durante perseguições.</p>
+
+            <p>Os felinos habitam uma grande variedade de ambientes naturais, como florestas tropicais, savanas, montanhas, desertos e até áreas urbanas, como é o caso do gato-doméstico. Estão presentes em quase todos os continentes, com exceção da Antártida e da Austrália, sendo que nesta última foram introduzidos pelo ser humano. Apesar da diversidade de ambientes, muitas espécies são discretas e difíceis de observar na natureza devido a seus hábitos solitários e noturnos.</p>
+
+            <p>A família Felidae é dividida em duas subfamílias principais. A subfamília Pantherinae inclui os chamados grandes felinos, como o leão, o tigre, a onça-pintada, o leopardo e o leopardo-das-neves. Já a subfamília Felinae compreende os felinos de pequeno e médio porte, como os linces, os servais, os gatos-monteses, os gatos selvagens sul-americanos e o próprio gato-doméstico.</p>
+
+            <p>Além de sua importância cultural e simbólica em muitas civilizações, os felinos exercem um papel ecológico fundamental como predadores. Eles ajudam a manter o equilíbrio dos ecossistemas ao controlar as populações de presas, prevenindo superpopulações e promovendo a diversidade biológica. No entanto, muitas espécies de felinos enfrentam ameaças sérias, como a perda de habitat, a caça ilegal e conflitos com atividades humanas, sendo protegidas por leis e programas de conservação em diversas partes do mundo.</p>
+        </main>
+    </div>
+</main>
+
+</body>
+</html>

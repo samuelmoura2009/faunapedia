@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="arquivos/logo.png"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humano - Faunapedia</title>
+    <style>
+        /* Estilos gerais para um visual minimalista */
+        body {
+            font-family: Segoe UI;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+        }
+
+        /* --- ESTILOS DO CABEÇALHO --- */
+        .site-header {
+            background-color: #065225;
+            color: white;
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .site-title-link {
+            text-decoration: none;
+            color: inherit;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+        
+        .search-form {
+            flex-grow: 1; 
+            display: flex;
+            justify-content: center; 
+        }
+
+        .search-form input {
+            width: 80%;
+            max-width: 450px;
+            padding: 9.6px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* --- WRAPPER PARA O CONTEÚDO --- */
+        .page-content {
+            padding: 32px;
+        }
+
+        /* Container principal para o layout de duas colunas */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            /* --- ESTA É A CORREÇÃO CRUCIAL --- */
+            display: flow-root; /* Garante que o container contenha o float */
+        }
+
+        /* Caixa da esquerda */
+        .sidebar {
+            width: 280px;
+            background-color: #ffffff;
+            padding: 24px;            
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            float: left; 
+            margin-right: 32px;
+            margin-bottom: 24px;
+        }
+        
+        .animal-foto {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .sidebar img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .sidebar h2 {
+            margin-top: 16px;
+            margin-bottom: 0.16px;
+            font-size: 24px;
+        }
+        .sidebar .family-name {
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-size: 19.2px;
+            color: #555;
+        }
+        .taxonomy-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;           
+        }
+        .taxonomy-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 4.8px 0;
+            border-bottom: 1px solid #ddd;
+            font-size: 14.4px;
+            color: #2b5737;
+        }
+        .taxonomy-list li span:last-child {
+            font-weight: bold;
+        }
+
+        .taxonomy-list a {
+    text-decoration: none;
+    
+}
+       
+        .main-content p, .main-content h3 {
+             margin-top: 0; /* Evita margens estranhas no topo do texto */
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+     <a href="pagina.html" class="site-title-link" >Faunapedia</a>
+    <form class="search-form">
+        <input type="search" placeholder="Pesquisar...">
+    </form>
+</header>
+
+<main class="page-content">
+    <div class="container">
+        <!-- Coluna da Esquerda com a Caixa Cinza -->
+        <aside class="sidebar">
+           <img src="https://viagem.cnnbrasil.com.br/wp-content/uploads/sites/5/2022/01/Chef-Roberto-Satoru.jpg?w=419&h=283&crop=0" alt="Foto de um humano" class="animal-foto">
+           
+            <h2>Humano</h2>
+            <em><p class="family-name">Homo sapiens</p></em>
+            <p>Estado de Conservação:<br>
+                <span style="background-color: #6bc987;  font-weight: bold;">Pouco Preocupante</span>
+            </p>
+            <ul class="taxonomy-list">
+                <li><span>Domínio:</span> <span>Eukaryota</span></li>
+                <li><span>Reino:</span> <span>Animalia</span></li>
+                <li><span>Filo:</span> <span>Chordata</span></li>
+                <li><span>Subfilo:</span> <span>Vertebrata</span></li>
+                <li><span>Classe:</span> <a href="mammalia.html"><span>Mammalia</a></span></li>
+                <li><span>Ordem:</span> <span><a href="primates.html">Primates</a></span></li>
+                <li><span>Subordem:</span> <span>Haplorhini</span></li>
+                <li><span>Infraordem:</span> <span>Simiiformes</span></li>
+                <li><span>Parvodem:</span> <span>Catarrhini</span></li>
+                <li><span>Superfamília:</span> <span>Hominoidea</span></li>
+                <li><span>Família:</span> <a href="primates.html"><span>Hominidae</a></span></li>
+                <li><span>Gênero:</span> <span><i>Homo</i></span></li>
+                <li><span>Espécie:</span><span><i>Homo sapiens</i></span></li>
+            </ul>
+           <p><b>Região Geográfica:</b></p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Countries_by_population_density.svg" alt="Mapa da distribuição dos babuínos" style="margin-top: 10px;">
+        </aside>
+
+        <!-- Coluna da Direita com o Texto -->
+        <main class="main-content">
+            <h1>Humano</h1>
+
+<p>O ser humano moderno, cientificamente conhecido como <i>Homo sapiens</i>, é a única espécie de hominídeo viva atualmente e se destaca por sua inteligência avançada, capacidade simbólica e complexidade social sem paralelos no reino animal. Originado no continente africano há cerca de 300 mil anos, o <i>Homo sapiens</i> expandiu-se para praticamente todos os ambientes do planeta, desde florestas tropicais e desertos até grandes metrópoles, regiões polares e estações espaciais. É a única espécie que habita todos os continentes da Terra.</p>
+
+<h3>Características físicas</h3>
+
+<p>Os seres humanos apresentam grande variedade de características físicas, refletindo adaptação a diferentes ambientes ao longo da história evolutiva. A espécie possui postura ereta, mãos com polegares opositores e cérebros altamente desenvolvidos, características que permitiram o uso de ferramentas complexas, linguagem e cultura.</p>
+
+<p>Homens e mulheres apresentam dimorfismo sexual moderado: os homens, em média, possuem maior massa muscular e estrutura corporal, enquanto as mulheres tendem a ter maior porcentagem de gordura corporal e características adaptadas à gestação e amamentação. A cor da pele, textura do cabelo e outras características variam amplamente entre populações, resultado de adaptações locais e diversidade genética.</p>
+
+<h3>Comportamento e organização social</h3>
+
+<p>O <i>Homo sapiens</i> é profundamente social. Vive em estruturas organizadas que vão desde famílias nucleares até nações e instituições globais. A sociedade humana é extremamente flexível e pode se basear em parentesco, afiliação política, religião, trabalho, cultura ou interesses comuns.</p>
+
+<p>A comunicação é um dos pilares do comportamento humano. A linguagem falada e escrita, os símbolos e os sistemas de crença permitem a transmissão de conhecimento entre gerações, algo raro ou inexistente em outras espécies. Os seres humanos constroem culturas complexas, com regras sociais, rituais, leis e sistemas de governo.</p>
+
+<h3>Alimentação</h3>
+
+<p>O ser humano é onívoro e altamente adaptável em sua dieta. Isso permitiu a colonização de ambientes diversos. A dieta humana pode incluir vegetais, frutas, sementes, raízes, cereais, carne, peixe, laticínios e alimentos processados. Com o avanço da agricultura e da tecnologia, a alimentação se tornou também uma expressão cultural e econômica, variando imensamente de uma região para outra.</p>
+
+<p>Além da necessidade nutricional, a alimentação humana está associada a aspectos sociais, religiosos e simbólicos, como celebrações, jejuns, tabus e tradições.</p>
+
+<h3>Reprodução</h3>
+
+<p>A reprodução humana é baseada em um sistema sexual com fecundação interna. A gestação dura aproximadamente 9 meses, e geralmente resulta no nascimento de um único bebê. Os cuidados parentais prolongados são uma característica marcante da espécie, os filhos permanecem dependentes por anos, o que reforça os laços sociais e a necessidade de estruturas familiares ou comunitárias.</p>
+
+<p>Mulheres atingem a maturidade sexual entre os 10 e 14 anos, enquanto nos homens ocorre um pouco mais tarde. Ao longo da vida, a reprodução e a criação de filhos são moldadas por fatores sociais, culturais e econômicos.</p>
+
+<h3>Expectativa de vida</h3>
+
+<p>A expectativa de vida do <i>Homo sapiens</i> varia bastante ao longo da história e entre regiões. No passado, doenças, acidentes e predadores reduziam drasticamente a longevidade. Com os avanços da medicina, saneamento e tecnologia, muitos países hoje apresentam expectativa de vida acima dos 75 ou 80 anos. Em situações ideais, os seres humanos podem viver até os 100 anos ou mais.</p>
+
+<h3>Importância cultural</h3>
+
+<p>O ser humano não apenas interage com o mundo, mas o transforma de maneira radical. <i>Homo sapiens</i> é a única espécie capaz de construir civilizações, escrever histórias, criar ciência, arte e religião. Em muitas culturas, os humanos se veem como seres com propósito ou alma, e a reflexão sobre sua origem, papel no universo e destino é uma constante.</p>
+
+<p>Ao longo da história, os humanos desenvolveram mitologias, filosofias e religiões que tentam explicar sua existência. Também criaram sistemas científicos para entender o cosmos, a vida e a própria mente. Do ponto de vista cultural, o <i>Homo sapiens</i> é ao mesmo tempo o observador e o protagonista da história da Terra.</p>
+
+            
+        </main>
+    </div>
+</main>
+
+</body>
+</html>

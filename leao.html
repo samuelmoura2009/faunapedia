@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="arquivos/logo.png"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leão - Faunapedia</title>
+    <style>
+        /* Estilos gerais para um visual minimalista */
+        body {
+            font-family: Segoe UI;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+        }
+
+        /* --- ESTILOS DO CABEÇALHO --- */
+        .site-header {
+            background-color: #065225;
+            color: white;
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .site-title-link {
+            text-decoration: none;
+            color: inherit;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+        
+        .search-form {
+            flex-grow: 1; 
+            display: flex;
+            justify-content: center; 
+        }
+
+        .search-form input {
+            width: 80%;
+            max-width: 450px;
+            padding: 9.6px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* --- WRAPPER PARA O CONTEÚDO --- */
+        .page-content {
+            padding: 32px;
+        }
+
+        /* Container principal para o layout de duas colunas */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            /* --- ESTA É A CORREÇÃO CRUCIAL --- */
+            display: flow-root; /* Garante que o container contenha o float */
+        }
+
+        /* Caixa da esquerda */
+        .sidebar {
+            width: 280px;
+            background-color: #ffffff;
+            padding: 24px;            
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            float: left; 
+            margin-right: 32px;
+            margin-bottom: 24px;
+        }
+        
+        .animal-foto {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .sidebar img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .sidebar h2 {
+            margin-top: 16px;
+            margin-bottom: 0.16px;
+            font-size: 24px;
+        }
+        .sidebar .family-name {
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-size: 19.2px;
+            color: #555;
+        }
+        .taxonomy-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            
+
+        }
+        .taxonomy-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 4.8px 0;
+            border-bottom: 1px solid #ddd;
+            font-size: 14.4px;
+            color: #2b5737;
+        }
+
+        .taxonomy-list li span:last-child {
+            font-weight: bold;           
+        }
+
+        
+
+        .taxonomy-list a {
+        text-decoration: none;
+    }
+       
+        .main-content p, .main-content h3 {
+             margin-top: 0;
+        }
+
+        .conserva a {
+             color: inherit;
+             text-decoration: none;
+             
+        }
+
+  .lista-especies {
+            text-align: left;
+            padding-left: 16px;
+            list-style-type: disc;           
+        }
+
+    .divisao {
+            border: none;
+            border-bottom: 1px solid #ddd;
+            margin: 12px 0;
+        }
+        .lista-especies a {
+         text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+     <a href="pagina.html" class="site-title-link" >Faunapedia</a>
+    <form class="search-form">
+        <input type="search" placeholder="Pesquisar...">
+    </form>
+</header>
+
+<main class="page-content">
+    <div class="container">
+        <!-- Coluna da Esquerda com a Caixa Cinza -->
+        <aside class="sidebar">
+           <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/nationalgeographic_2788792_0.webp?w=1600&h=900" alt="Foto de um leão" class="animal-foto">
+           
+            <h2>Leão</h2>
+            <em><p class="family-name">Panthera Leo</p></em>
+            <p>Estado de Conservação:<br>
+                <div class="conserva">
+                <span style="background-color: #f3f585;  font-weight: bold;"><a href="conservacao.html">Vulnerável</a></span>
+                </div>
+            </p>
+            <ul class="taxonomy-list">
+
+                
+                <li><span><a href="taxonomia.html">Domínio:</a></span> <span>Eukaryota</span></li>
+                <li><span><a href="taxonomia.html">Reino:</a></span> <span>Animalia</span></li>
+                <li><span><a href="taxonomia.html">Filo:</a></span> <span>Chordata</span></li>
+                <li><span><a href="taxonomia.html">Classe:</a></span> <a href="mammalia.html"><span>Mammalia</a></span></li>
+                <li><span><a href="taxonomia.html">Infraclasse:</a></span> <span>Placentalia</span></li>
+                <li><span><a href="taxonomia.html">Ordem:</a></span> <span>Carnivora</span></li>
+                <li><span><a href="taxonomia.html">Família:</a></span> <a href="felinos.html"><span>Felidae</span></a></li>
+                <li><span><a href="taxonomia.html">Gênero:</a></span> <span><i>Panthera</i></span></li>
+                <li><span><a href="taxonomia.html">Espécie:</a></span><span><i>P. Leo</i></span></li>
+                
+
+            </ul>
+           <p><b>Região Geográfica:</b></p>
+           <img src="https://pbs.twimg.com/media/Eo-yyJmWMAE0iei.jpg" alt="Mapa da distribuição dos babuínos" style="margin-top: 10px;">
+
+           <hr class="divisao">
+
+            <p><b>Subespécies:</b></p>
+            <ul class="lista-especies">
+               <li><a href="">Panthera leo leo</a></li>
+               <li><a href="">Panthera leo melanochaita</a></li>              
+           </ul>
+
+        </aside>
+
+        <!-- Coluna da Direita com o Texto -->
+        <main class="main-content">
+        
+            <h1>Leão</h1>
+            
+            
+<p>O leão, cientificamente conhecido como <i>Panthera leo</i>, é um dos mamíferos carnívoros mais emblemáticos do mundo, pertencente à família Felidae. Popularmente chamado de "rei da selva", ele é um dos grandes felinos do gênero <i>Panthera</i>. Atualmente, os leões são encontrados de forma nativa na África Subsaariana e em uma pequena e isolada população no Parque Nacional da Floresta de Gir, na Índia. Historicamente, sua distribuição era muito mais ampla, abrangendo a maior parte da África, o Sudoeste Asiático e até partes da Europa.</p>
+
+<h3>Características físicas</h3>
+
+<p>O leão é o segundo maior felino vivo, superado apenas pelo tigre. A característica mais distintiva dos machos é sua imponente juba, que pode variar em cor do loiro ao preto e serve como um indicador de sua força e saúde para as fêmeas. As fêmeas, conhecidas como leoas, são menores e não possuem juba. A pelagem do corpo é curta e de cor amarelo-dourada. Os machos podem pesar até 250 kg, enquanto as fêmeas pesam em média entre 120 e 180 kg. Ambos os sexos possuem garras retráteis e uma mordida poderosa, perfeitamente adaptados para abater grandes presas.</p>
+
+<h3>Comportamento e organização social</h3>
+
+<p>Diferentemente da maioria dos outros felinos, que são solitários, os leões são animais extremamente sociais que vivem em grupos chamados bandos. Um bando típico é composto por várias fêmeas aparentadas, seus filhotes e alguns machos adultos. Há uma clara divisão de trabalho: as leoas, mais ágeis e leves, são as principais caçadoras e trabalham em equipe para cercar e abater as presas. A principal função dos machos é defender o território e o bando de leões rivais. A comunicação é feita através de rugidos potentes que podem ser ouvidos a quilômetros de distância, servindo para demarcar território e localizar outros membros do bando.</p>
+
+<h3>Alimentação</h3>
+
+<p>O leão é um carnívoro de topo e um superpredador. Sua dieta consiste principalmente de mamíferos de médio a grande porte, como gnus, zebras, búfalos, antílopes e javalis. A caça é frequentemente uma atividade cooperativa realizada em grupo pelas fêmeas, que utilizam estratégias de emboscada para aumentar suas chances de sucesso. Após a caça, a hierarquia do bando determina a ordem de alimentação, com os machos adultos geralmente comendo primeiro.</p>
+
+<h3>Reprodução</h3>
+
+<p>As leoas atingem a maturidade sexual por volta dos quatro anos de idade e podem se reproduzir durante todo o ano. O período de gestação dura cerca de 110 dias, resultando no nascimento de uma ninhada de um a quatro filhotes. Os filhotes nascem com manchas escuras que desaparecem à medida que crescem e são cuidados de forma comunitária por todas as fêmeas do bando. A taxa de mortalidade dos filhotes é alta, principalmente devido à predação e ao infanticídio, que ocorre quando novos machos assumem o controle de um bando e matam os filhotes de seus predecessores.</p>
+
+<h3>Expectativa de vida</h3>
+
+<p>Na natureza, os leões vivem em média de 10 a 14 anos. A vida dos machos tende a ser mais curta e brutal devido às constantes e violentas disputas por território e pelo direito de acasalar. Em cativeiro, com a ausência de ameaças e com cuidados veterinários, a expectativa de vida pode aumentar consideravelmente, ultrapassando os 20 anos.</p>
+
+<h3>Curiosidades e importância cultural</h3>
+
+<p>O leão é um dos animais mais reverenciados na cultura humana, simbolizando força, coragem, nobreza e realeza em diversas civilizações ao longo da história. Ele é uma figura proeminente em brasões, bandeiras, esculturas e contos populares em todo o mundo. Apesar de sua importância cultural, as populações de leões selvagens diminuíram drasticamente no último século devido à perda de habitat, caça e conflitos com humanos. Atualmente, a espécie está classificada como "Vulnerável" na Lista Vermelha da IUCN.</p>
+            
+            
+        </main>
+    </div>
+</main>
+
+</body>
+</html>

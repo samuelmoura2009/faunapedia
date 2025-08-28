@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="arquivos/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <title>Estado de Conservação - Faunapedia</title>
+    <style>
+        /* Estilos gerais para um visual minimalista */
+        body {
+            font-family: Segoe UI;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+        }
+
+        /* --- ESTILOS DO CABEÇALHO --- */
+        .site-header {
+            background-color: #065225;
+            color: white;
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .site-title-link {
+            text-decoration: none;
+            color: inherit;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+        
+        .search-form {
+            flex-grow: 1; 
+            display: flex;
+            justify-content: center; 
+        }
+
+        .search-form input {
+            width: 80%;
+            max-width: 450px;
+            padding: 9.6px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* --- WRAPPER PARA O CONTEÚDO --- */
+        .page-content {
+            padding: 32px;
+        }
+
+        /* Container principal para o layout de duas colunas */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            /* --- ESTA É A CORREÇÃO CRUCIAL --- */
+            display: flow-root; /* Garante que o container contenha o float */
+        }
+
+        /* Caixa da esquerda */
+        .sidebar {
+            width: 280px;
+            background-color: #ffffff;
+            padding: 24px;            
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            float: left; 
+            margin-right: 32px;
+            margin-bottom: 24px;
+        }
+        
+        .animal-foto {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .sidebar img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .sidebar h2 {
+            margin-top: 16px;
+            margin-bottom: 0.16px;
+            font-size: 24px;
+        }
+        .sidebar .family-name {
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-size: 19.2px;
+            color: #555;
+        }
+      
+        .main-content p, .main-content h3 {
+             margin-top: 0; /* Evita margens estranhas no topo do texto */
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    
+    <a href="pagina.html" class="site-title-link" >Faunapedia</a>
+    <form class="search-form">
+        <input type="search" placeholder="Pesquisar...">
+    </form>
+</header>
+
+<main class="page-content">
+    <div class="container">
+      
+        <aside class="sidebar">
+           <img src="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/os-fosseis-sao-restos-ou-vestigios-seres-vivos-que-ficaram-preservados-5b509fc8ac6fb.jpg" alt="Foto de dinossauro" class="animal-foto">
+           
+        </aside>
+
+        <main class="main-content">
+            
+          <h1>Classificação de Conservação Animal (IUCN)</h1>
+            
+            <p>A biodiversidade do planeta está enfrentando ameaças sem precedentes causadas principalmente pela ação humana, como a destruição de habitats, poluição, caça ilegal e mudanças climáticas. Para monitorar e classificar o risco de extinção das espécies ao redor do mundo, a União Internacional para a Conservação da Natureza (IUCN) desenvolveu a Lista Vermelha de Espécies Ameaçadas, considerada a principal referência global nesse assunto.</p>
+
+<p>Essa lista organiza as espécies em diferentes categorias de conservação, que indicam o grau de ameaça que cada uma enfrenta, desde aquelas que estão completamente extintas até aquelas que não apresentam risco significativo no momento. Compreender essas categorias é fundamental para orientar ações de preservação, políticas públicas, pesquisas científicas e também para conscientizar a sociedade sobre a importância da conservação da fauna.</p>
+
+<h2>Extintos</h2>
+
+<h3><span style="background-color: #808080">Extinto (EX)</span></h3>
+<p>Uma espécie é considerada extinta quando não há dúvida razoável de que o último indivíduo tenha morrido. Isso significa que, mesmo após extensas buscas nos habitats conhecidos e potenciais da espécie, nenhum exemplar foi encontrado. Exemplo clássico é o dodô, uma ave que desapareceu no século XVII devido à caça e à introdução de predadores em seu habitat.</p>
+
+<h3><span style="background-color: #bc69ff">Extinto na natureza (EW)</span></h3>
+<p>Essa categoria indica que a espécie só existe em cativeiro ou fora de seu habitat natural original. Nenhum indivíduo é encontrado em ambiente selvagem, embora ainda haja representantes vivos em zoológicos, viveiros ou programas de reprodução. Um exemplo é o cavalo-de-przewalski, que foi considerado EW por décadas antes de ser reintroduzido com sucesso em seu habitat natural.</p>
+
+<h2>Ameaçados</h2>
+
+<h3><span style="background-color: #ff6969">Criticamente em perigo (CR)</span></h3>
+<p>É o nível mais alto de ameaça antes da extinção. Uma espécie é classificada como criticamente em perigo quando enfrenta risco extremamente alto de extinção na natureza num futuro imediato. As populações são muito pequenas, estão severamente fragmentadas ou estão enfrentando declínios acelerados. A ararinha-azul, por exemplo, já esteve nesta categoria.</p>
+
+<h3><span style="background-color: #ffca69">Em perigo (EN)</span></h3>
+<p>Uma espécie é considerada em perigo quando está em risco muito alto de extinção em um futuro próximo. Isso pode ser resultado de perda de habitat, caça, mudanças climáticas ou outros fatores. Embora em situação grave, ainda há chances de recuperação com esforços de conservação eficazes. O lobo-guará, por exemplo, é considerado vulnerável, mas já teve populações sob ameaça mais séria.</p>
+
+<h3><span style="background-color: #f3f585">Vulnerável (VU)</span></h3>
+<p>A categoria vulnerável indica que a espécie enfrenta um alto risco de extinção em médio prazo. As ameaças são sérias, mas não tão imediatas quanto nas categorias CR ou EN. Muitas espécies de mamíferos, aves e anfíbios estão nesta categoria devido à destruição de seus habitats naturais, como o tamanduá-bandeira.</p>
+
+<h2>Menor risco</h2>
+
+<h3><span style="background-color: #c7e659">Quase ameaçado (NT)</span></h3>
+<p>Essas espécies ainda não estão em perigo, mas estão próximas dos critérios para serem consideradas ameaçadas. Elas podem entrar em uma categoria mais grave caso as ameaças atuais continuem ou aumentem. É uma espécie sob vigilância, e sua situação pode piorar rapidamente sem ações preventivas.</p>as. Elas podem entrar em uma categoria mais grave caso as ameaças atuais continuem ou aumentem. É uma espécie sob vigilância, e sua situação pode piorar rapidamente sem ações preventivas.</p>
+
+<h3><span style="background-color: #6bc987">Pouco preocupante (LC)</span></h3>
+<p>Espécies classificadas como pouco preocupantes estão amplamente distribuídas, com populações estáveis e sem ameaças significativas conhecidas. São consideradas fora de risco no momento. Exemplos incluem animais comuns como o veado-catingueiro ou algumas espécies de roedores.</p>
+
+<h2>Outras categorias</h2>
+
+<h3><span style="background-color: #cecece">Dados Deficientes (DD)</span></h3>
+<p>Quando não há informações suficientes para avaliar adequadamente o risco de extinção de uma espécie, ela é classificada como dados deficientes. Isso não significa que a espécie está segura, mas sim que faltam dados confiáveis sobre sua distribuição, população ou ameaças. Pesquisas adicionais são necessárias.</p>
+
+<h3><span style="background-color: #e7e7e7">Não avaliado (NE)</span></h3>
+<p>A categoria "não avaliado" é usada para espécies que ainda não foram analisadas pela IUCN. Isso pode incluir espécies recém-descobertas ou aquelas que ainda não passaram por revisão. Não indica nenhum status específico, apenas que a avaliação ainda não foi feita.</p>
+        </main>
+    </div>
+</main>
+
+</body>
+</html>

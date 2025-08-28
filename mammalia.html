@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="arquivos/logo.png"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamíferos - Faunapedia</title>
+    <style>
+        /* Estilos gerais para um visual minimalista */
+        body {
+            font-family: Segoe UI;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+        }
+
+        /* --- ESTILOS DO CABEÇALHO --- */
+        .site-header {
+            background-color: #065225;
+            color: white;
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .site-title-link {
+            text-decoration: none;
+            color: inherit;
+             font-size: 30px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+        
+        .search-form {
+            flex-grow: 1; 
+            display: flex;
+            justify-content: center; 
+        }
+
+        .search-form input {
+            width: 80%;
+            max-width: 450px;
+            padding: 9.6px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* --- WRAPPER PARA O CONTEÚDO --- */
+        .page-content {
+            padding: 32px;
+        }
+
+        /* Container principal para o layout de duas colunas */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            /* --- ESTA É A CORREÇÃO CRUCIAL --- */
+            display: flow-root; /* Garante que o container contenha o float */
+        }
+
+        /* Caixa da esquerda */
+        .sidebar {
+            width: 280px;
+            background-color: #ffffff;
+            padding: 24px;            
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            float: left; 
+            margin-right: 32px;
+            margin-bottom: 24px;
+        }
+        
+        .animal-foto {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .sidebar img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .sidebar h2 {
+            margin-top: 16px;
+            margin-bottom: 0.16px;
+            font-size: 24px;
+        }
+        .sidebar .family-name {
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-size: 19.2px;
+            color: #555;
+        }
+        .taxonomy-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+        .taxonomy-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 4.8px 0;
+            border-bottom: 1px solid #ddd;
+            font-size: 14.4px;
+            color: #2b5737;
+        }
+        .taxonomy-list li span:last-child {
+            font-weight: bold;
+        }
+
+        .lista-especies {
+            text-align: left;
+            padding-left: 16px;
+            list-style-type: disc;
+        }
+
+        /* NOVO ESTILO ADICIONADO PARA O ANINHAMENTO */
+        .lista-especies ul {
+            padding-left: 15px; /* Adiciona recuo para sub-listas */
+            margin-top: 4px;
+            list-style-type: disc;
+        }
+
+        .lista-especies a {
+         text-decoration: none;
+        }
+
+        .taxonomy-list a {
+            text-decoration: none;
+        }
+       
+        .main-content p, .main-content h3 {
+             margin-top: 0; /* Evita margens estranhas no topo do texto */
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <a href="pagina.html" class="site-title-link" >Faunapedia</a>
+    <form class="search-form">
+        <input type="search" placeholder="Pesquisar...">
+    </form>
+</header>
+
+<main class="page-content">
+    <div class="container">
+        <!-- Coluna da Esquerda com a Caixa Cinza -->
+        <aside class="sidebar">
+           <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/80551250/medium.jpg" alt="Foto de primatas" class="animal-foto">
+           
+            <h2>Mamíferos</h2>
+            <em><p class="family-name">Mammalia</p></em>
+            
+            <ul class="taxonomy-list">
+                <li><span>Domínio:</span> <span>Eukaryota</span></li>
+                <li><span>Reino:</span> <span>Animalia</span></li>
+                <li><span>Filo:</span> <span>Chordata</span></li>
+                <li><span>Classe:</span> <span>Mammalia</span></li>       
+            </ul>
+
+            <p><b>Ordens:</b></p>
+            
+            <!-- LISTA REESTRUTURADA -->
+            <ul class="lista-especies">
+               <li>Monotremados (Prototheria)
+                    <ul>
+                        <li>Monotremata</li>
+                    </ul>
+                </li>
+                <li>Marsupiais (Metatheria)
+                    <ul>
+                        <li>Monotremata</li>
+                        <li>Didelphimorphia</li>
+						<li>Paucituberculata</li>
+						<li>Microbiotheria</li>
+						<li>Notoryctemorphia</li>
+						<li>Dasyuromorphia</li>
+						<li>Peramelemorphia</li>
+						<li>Diprotodontia</li>
+                    </ul>
+                </li>
+                <li>Placentários (Eutheria)
+                    <ul>
+                        <li>Afrosoricida</li>
+                        <li>Macroscelidea</li>
+						<li>Tubulidentata</li>
+						<li>Hyracoidea</li>
+						<li>Proboscidea</li>
+						<li>Sirenia</li>
+						<li>Cingulata</li>
+						<li>Pilosa</li>
+                        <li>Scandentia</li>
+                        <li>Dermoptera</li>
+                        <li><a href="primates.html">Primates</a></li>
+                        <li>Rodentia</li>
+                        <li>Lagomorpha</li>
+                        <li>Eulipotyphla</li>
+                        <li>Chiroptera</li>
+                        <li>Pholidota</li>
+                        <li>Carnivora</li>
+                        <li>Perissodactyla</li>
+                        <li>Artiodactyla</li>
+                        <li>Cetacea</li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- FIM DA LISTA REESTRUTURADA -->
+
+        </aside>
+
+        <!-- Coluna da Direita com o Texto -->
+        <main class="main-content">
+            <h1>Mamíferos</h1>
+            
+           <p>Os mamíferos são uma classe de vertebrados que se destaca por características únicas, como a presença de glândulas mamárias que produzem leite para alimentar os filhotes, pelos cobrindo o corpo e a capacidade de regular a temperatura interna do corpo, ou seja, são animais homeotérmicos. Essa classe é extremamente diversificada, abrigando desde pequenos morcegos até as grandes baleias.</p>
+
+            <p>A origem dos mamíferos remonta ao período Triássico, há mais de 200 milhões de anos, a partir de um grupo de répteis sinapsídeos. Com o tempo, os mamíferos desenvolveram adaptações importantes, como o cérebro mais desenvolvido, a mandíbula formada por um único osso e a dentição diferenciada. Essas mudanças foram fundamentais para o sucesso evolutivo do grupo, que se expandiu e ocupou quase todos os habitats do planeta.</p>
+
+            <p>Atualmente, os mamíferos estão divididos em três grandes grupos. O primeiro grupo é o dos monotremados, que inclui animais que botam ovos, como o ornitorrinco e as equidnas. O segundo grupo é o dos marsupiais, que possuem um estágio inicial de desenvolvimento embrionário no útero e depois continuam o desenvolvimento em uma bolsa externa, como ocorre com os cangurus e coalas. O terceiro e mais numeroso grupo é o dos placentários, que têm um sistema reprodutivo mais complexo e permitem o desenvolvimento completo do embrião dentro do útero, por meio da placenta. Entre os placentários estão animais como elefantes, primatas, carnívoros, roedores e cetáceos.</p>
+
+            <p>Os mamíferos apresentam grande diversidade de formas, tamanhos e modos de vida. Alguns são terrestres, outros aquáticos, alguns são voadores, outros escavadores. Essa variedade também se reflete na alimentação, que pode ser herbívora, carnívora, insetívora ou onívora. Além disso, muitos mamíferos possuem comportamentos sociais complexos e uma notável capacidade de aprendizado.</p>
+
+            <p>A relação dos mamíferos com os seres humanos é profunda e multifacetada. Além de sermos parte desse grupo, diversas espécies são domesticadas, outras têm importância econômica, ecológica ou cultural. No entanto, muitas espécies de mamíferos enfrentam sérias ameaças, como a destruição de habitat, a caça ilegal, as mudanças climáticas e a poluição. A conservação dos mamíferos é essencial para o equilíbrio ecológico e para a manutenção da biodiversidade do planeta.</p>
+
+            <p>Estudar os mamíferos ajuda a entender melhor a evolução da vida, o funcionamento dos ecossistemas e o papel dos seres humanos no ambiente natural. Essa classe, com sua impressionante diversidade e complexidade, continua a fascinar cientistas e entusiastas da natureza em todo o mundo.</p>
+        </main>
+    </div>
+</main>
+
+</body>
+</html>

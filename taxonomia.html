@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="arquivos/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <title>Taxonomia - Faunapedia</title>
+    <style>
+        /* Estilos gerais para um visual minimalista */
+        body {
+            font-family: Segoe UI;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+        }
+
+        /* --- ESTILOS DO CABEÇALHO --- */
+        .site-header {
+            background-color: #065225;
+            color: white;
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .site-title-link {
+            text-decoration: none;
+            color: inherit;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+        
+        .search-form {
+            flex-grow: 1; 
+            display: flex;
+            justify-content: center; 
+        }
+
+        .search-form input {
+            width: 80%;
+            max-width: 450px;
+            padding: 9.6px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* --- WRAPPER PARA O CONTEÚDO --- */
+        .page-content {
+            padding: 32px;
+        }
+
+        /* Container principal para o layout de duas colunas */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            /* --- ESTA É A CORREÇÃO CRUCIAL --- */
+            display: flow-root; /* Garante que o container contenha o float */
+        }
+
+        /* Caixa da esquerda */
+        .sidebar {
+            width: 280px;
+            background-color: #ffffff;
+            padding: 24px;            
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            float: left; 
+            margin-right: 32px;
+            margin-bottom: 24px;
+        }
+        
+        .animal-foto {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .sidebar img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .sidebar h2 {
+            margin-top: 16px;
+            margin-bottom: 0.16px;
+            font-size: 24px;
+        }
+        .sidebar .family-name {
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-size: 19.2px;
+            color: #555;
+        }
+      
+        .main-content p, .main-content h3 {
+             margin-top: 0; /* Evita margens estranhas no topo do texto */
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    
+    <a href="pagina.html" class="site-title-link" >Faunapedia</a>
+    <form class="search-form">
+        <input type="search" placeholder="Pesquisar...">
+    </form>
+</header>
+
+<main class="page-content">
+    <div class="container">
+      
+        <aside class="sidebar">
+           <img src="https://blogscielo.b-cdn.net/wp-content/uploads/2020/09/49431532352_12408fe698_k.png" alt="Foto de dinossauro" class="animal-foto">
+           
+        </aside>
+
+        <main class="main-content">
+            
+          <h1>Taxonomia</h1>
+            
+          <p>A taxonomia é o ramo da biologia responsável por identificar, nomear e classificar os organismos vivos. Ela estabelece uma estrutura padronizada para organizar a enorme diversidade biológica, permitindo que os cientistas descrevam e comuniquem informações sobre os seres vivos de forma precisa. Além disso, ela é essencial para estudos em ecologia, evolução, genética, conservação ambiental e muitas outras áreas.</p>
+
+<h3>Origem da Taxonomia</h3>
+
+<p>A taxonomia tem raízes na Antiguidade, quando filósofos gregos como Aristóteles já tentavam organizar os seres vivos com base em características observáveis. No entanto, ela foi formalizada no século XVIII pelo naturalista sueco Carl von Linné (ou Lineu), considerado o pai da taxonomia moderna. Foi ele quem criou o sistema de nomenclatura binomial, ainda usado hoje, em que cada espécie recebe um nome científico composto por dois termos em latim: o gênero e a espécie.</p>
+
+<h3>Classificação taxonômica</h3>
+
+<p>A classificação biológica consiste em agrupar os seres vivos em diferentes níveis hierárquicos chamados de categorias taxonômicas. Essas categorias organizam os organismos do grupo mais amplo ao mais específico, permitindo visualizar os graus de semelhança e de parentesco entre eles. Cada uma dessas categorias representa um nível de inclusão, onde seres com características mais gerais compartilham os níveis superiores, enquanto os mais semelhantes entre si aparecem juntos nas classificações inferiores.</p>
+
+<p>A categoria mais ampla da classificação é o domínio, que agrupa todos os seres vivos com base em características celulares fundamentais. Atualmente, reconhecem-se três domínios: Archaea, que reúne organismos procariontes com estruturas únicas; Bacteria, formado pelas bactérias; e Eukarya, que inclui todos os organismos compostos por células eucarióticas, como animais, plantas, fungos e diversos microrganismos.</p>
+
+<p>Abaixo do domínio está o reino, uma das categorias mais conhecidas do sistema. No domínio Eukarya, por exemplo, encontram-se os reinos Animalia, Plantae, Fungi, Protista, entre outros que podem variar conforme a proposta de classificação adotada. Cada reino reúne organismos com organização biológica semelhante. Animais são pluricelulares, heterotróficos e não possuem parede celular, enquanto as plantas são autótrofas e apresentam parede celular de celulose, por exemplo.</p>
+
+<p>Seguindo a hierarquia, vem o filo, que agrupa organismos com planos corporais semelhantes. No reino Animalia, por exemplo, o filo Chordata inclui todos os animais que possuem notocorda em algum estágio do desenvolvimento embrionário, como peixes, anfíbios, répteis, aves e mamíferos. Outro exemplo é o filo Arthropoda, que inclui animais com corpo segmentado e exoesqueleto, como insetos e crustáceos.</p>
+
+<p>Abaixo do filo está a classe, uma categoria que reúne organismos com características ainda mais específicas. Dentro do filo Chordata, por exemplo, encontram-se classes como Mammalia, cujos representantes têm glândulas mamárias e pelos; Aves, com penas e capacidade de voo na maioria das espécies; e Reptilia, com pele seca e escamosa. Cada classe agrupa ordens que mantêm traços comuns mais refinados.</p>
+
+<p>A ordem é o próximo nível hierárquico e inclui famílias com muitas características compartilhadas. Na classe Mammalia, por exemplo, a ordem Carnivora compreende animais com dentes especializados para cortar carne, como leões, lobos e ursos. Outra ordem importante é a dos Primates, que inclui os macacos, os gorilas e o ser humano.</p>
+
+<p>A família reúne gêneros que compartilham uma estrutura corporal, comportamento e outras características mais próximas. A família Felidae, por exemplo, inclui todos os felinos, como o gato-doméstico, o leão, o tigre e a onça-pintada, que apresentam garras retráteis, sentidos aguçados e hábitos predatórios.</p>
+
+<p>Logo abaixo está o gênero, que agrupa espécies muito semelhantes entre si. Ele compõe a primeira parte do nome científico de um organismo. O gênero Panthera, por exemplo, inclui grandes felinos como o leão (Panthera leo), o tigre (Panthera tigris) e a onça-pintada (Panthera onca), que compartilham diversas características físicas e genéticas.</p>
+
+<p>A espécie é a menor e mais específica categoria da classificação biológica. Ela representa um grupo de organismos que podem cruzar entre si, gerando descendentes férteis. Cada espécie é identificada por um nome científico binomial, formado pelo gênero e pelo epíteto específico. Um exemplo é Homo sapiens, nome científico da espécie humana. A espécie expressa o maior grau de semelhança entre os indivíduos e indica uma identidade genética, morfológica e comportamental bastante próxima.</p>
+
+<p>Essa organização hierárquica permite que os cientistas descrevam, estudem e compreendam a diversidade da vida, facilitando a identificação de seres vivos e o entendimento de suas relações evolutivas, ecológicas e funcionais dentro da natureza.</p>
+
+<h3>Critérios de Classificação</h3>
+
+<p>Os critérios usados para classificar os organismos mudaram ao longo da história. No início, a classificação era baseada principalmente em características morfológicas, como a forma do corpo, número de patas, tipo de folha, presença de asas, entre outros aspectos físicos visíveis.</p>
+
+<p>Com os avanços da ciência, principalmente da genética e da biologia molecular, novos critérios foram incorporados, como:</p>
+
+<p>-Análise do DNA e RNA</p>
+<p>-Estrutura das proteínas</p>
+<p>-Desenvolvimento embrionário</p>
+<p>-Comportamentos reprodutivos</p>
+<p>-Evidências fósseis</p>
+
+<p>Atualmente, a classificação dos organismos considera principalmente suas relações evolutivas, ou seja, os graus de parentesco entre eles. Essa abordagem é chamada de sistemática filogenética e tem como objetivo reconstruir a árvore da vida, mostrando como os diferentes grupos evoluíram a partir de ancestrais comuns.</p>
+
+<h3>Importância da Taxonomia</h3>
+
+<p>A taxonomia é essencial para o entendimento da biodiversidade. Ela facilita o estudo da vida ao organizar as informações biológicas de forma clara e estruturada. Também é uma ferramenta indispensável para:</p>
+
+<p>-Monitoramento de espécies ameaçadas</p>
+<p>-Estudos de ecossistemas</p>
+<p>-Descoberta de novas espécies</p>
+<p>-Controle de pragas e doenças</p>
+<p>-Pesquisa médica e farmacológica</p>
+
+<p>Sem a taxonomia, seria muito mais difícil comunicar descobertas científicas, entender a história evolutiva dos seres vivos e aplicar esse conhecimento de maneira prática em áreas como saúde, agricultura e conservação.</p>
+        </main>
+    </div>
+</main>
+
+</body>
+</html>

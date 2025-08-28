@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="arquivos/logo.png"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primatas - Faunapedia</title>
+    <style>
+        /* Estilos gerais para um visual minimalista */
+        body {
+            font-family: Segoe UI;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+        }
+
+        /* --- ESTILOS DO CABEÇALHO --- */
+        .site-header {
+            background-color: #065225;
+            color: white;
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .site-title-link {
+            text-decoration: none;
+            color: inherit;
+             font-size: 30px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+        
+        .search-form {
+            flex-grow: 1; 
+            display: flex;
+            justify-content: center; 
+        }
+
+        .search-form input {
+            width: 80%;
+            max-width: 450px;
+            padding: 9.6px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* --- WRAPPER PARA O CONTEÚDO --- */
+        .page-content {
+            padding: 32px;
+        }
+
+        /* Container principal para o layout de duas colunas */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            /* --- ESTA É A CORREÇÃO CRUCIAL --- */
+            display: flow-root; /* Garante que o container contenha o float */
+        }
+
+        /* Caixa da esquerda */
+        .sidebar {
+            width: 280px;
+            background-color: #ffffff;
+            padding: 24px;            
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            float: left; 
+            margin-right: 32px;
+            margin-bottom: 24px;
+        }
+        
+        .animal-foto {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .sidebar img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .sidebar h2 {
+            margin-top: 16px;
+            margin-bottom: 0.16px;
+            font-size: 24px;
+        }
+        .sidebar .family-name {
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-size: 19.2px;
+            color: #555;
+        }
+        .taxonomy-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+        .taxonomy-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 4.8px 0;
+            border-bottom: 1px solid #ddd;
+            font-size: 14.4px;
+            color: #2b5737;
+        }
+        .taxonomy-list li span:last-child {
+            font-weight: bold;
+        }
+
+        .lista-especies {
+            text-align: left;
+            padding-left: 16px;
+            list-style-type: disc;
+        }
+
+        /* NOVO ESTILO ADICIONADO PARA O ANINHAMENTO */
+        .lista-especies ul {
+            padding-left: 15px; /* Adiciona recuo para sub-listas */
+            margin-top: 4px;
+            list-style-type: disc;
+        }
+
+        .lista-especies a {
+         text-decoration: none;
+        }
+
+        .taxonomy-list a {
+            text-decoration: none;
+        }
+       
+        .main-content p, .main-content h3 {
+             margin-top: 0; /* Evita margens estranhas no topo do texto */
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <a href="pagina.html" class="site-title-link" >Faunapedia</a>
+    <form class="search-form">
+        <input type="search" placeholder="Pesquisar...">
+    </form>
+</header>
+
+<main class="page-content">
+    <div class="container">
+        <!-- Coluna da Esquerda com a Caixa Cinza -->
+        <aside class="sidebar">
+           <img src="arquivos/primata.png" alt="Foto de primatas" class="animal-foto">
+           
+            <h2>Primatas</h2>
+            <em><p class="family-name">Primates</p></em>
+            
+            <ul class="taxonomy-list">
+                <li><span>Domínio:</span> <span>Eukaryota</span></li>
+                <li><span>Reino:</span> <span>Animalia</span></li>
+                <li><span>Filo:</span> <span>Chordata</span></li>
+                <li><span>Classe:</span> <a href="mammalia.html"><span>Mammalia</a></span></li>
+                <li><span>Ordem:</span> <span>Primates</span></li>              
+            </ul>
+           <p><b>Região Geográfica:</b></p>
+            <img src="arquivos/mapa.png" alt="Mapa da distribuição dos babuínos" style="margin-top: 10px;">
+           
+            <p><b>Famílias e Classificações:</b></p>
+            
+            <!-- LISTA REESTRUTURADA -->
+            <ul class="lista-especies">
+                <li>Subordem Strepsirrhini
+                    <ul>
+                        <li>Infraordem Lemuriformes
+                            <ul>
+                                <li>Família Cheirogaleidae</li>
+                                <li>Família Lemuridae</li>
+                                <li>Família Lepilemuridae</li>
+                                <li>Família Indriidae</li>
+                            </ul>
+                        </li>
+                        <li>Infraordem Chiromyiformes
+                            <ul>
+                                <li>Família Daubentoniidae</li>
+                            </ul>
+                        </li>
+                        <li>Infraordem Lorisiformes
+                            <ul>
+                                <li>Família Loridae</li>
+                                <li>Família Galagonidae</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Subordem Haplorrhini
+                    <ul>
+                        <li>Infraordem Tarsiiformes
+                            <ul>
+                                <li>Família Tarsiidae</li>
+                            </ul>
+                        </li>
+                        <li>Infraordem Simiiformes
+                            <ul>
+                                <li>Parvordem Platyrrhini
+                                    <ul>
+                                        <li>Família Aotidae</li>
+                                        <li>Família Atelidae</li>
+                                        <li>Família Callitrichidae</li>
+                                        <li>Família Cebidae</li>
+                                        <li>Família Pitheciidae</li>
+                                    </ul>
+                                </li>
+                                <li>Parvordem Catarrhini
+                                    <ul>
+                                        <li>Superfamília Cercopithecoidea
+                                            <ul>
+                                                <li>Família Cercopithecidae</li>
+                                            </ul>
+                                        </li>
+                                        <li>Superfamília Hominoidea
+                                            <ul>
+                                                <li>Família Hylobatidae</li>
+                                                <li><a href="hominidae.html">Família Hominidae</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- FIM DA LISTA REESTRUTURADA -->
+
+        </aside>
+
+        <!-- Coluna da Direita com o Texto -->
+        <main class="main-content">
+            <h1>Primatas</h1>
+            
+           <p>Os primatas constituem uma ordem diversificada de mamíferos que inclui lêmures, társios, macacos e grandes símios, sendo os seres humanos (Homo sapiens) seus representantes mais conhecidos. Essa ordem é notável pela grande complexidade comportamental, capacidade cognitiva avançada e diversidade morfológica. Os primatas estão distribuídos principalmente nas regiões tropicais e subtropicais das Américas, África e Ásia, ocupando uma ampla variedade de habitats, desde florestas tropicais até savanas e áreas montanhosas.</p>
+
+            <h3>Origem Evolutiva</h3>
+
+            <p>A origem dos primatas remonta ao final do período Cretáceo ou início do Paleoceno, há cerca de 60 a 70 milhões de anos. Os primeiros primatas ancestrais provavelmente surgiram a partir de mamíferos insetívoros arborícolas pequenos, semelhantes aos musaranhos, que começaram a explorar as copas das árvores em busca de alimento e segurança.</p>
+
+            <p>Esses mamíferos pré-primatas, conhecidos como plesiadapiformes, possuíam algumas características compartilhadas com os primatas modernos, como unhas achatadas (em vez de garras), órbitas oculares mais voltadas para frente e maior dependência da visão. Embora os plesiadapiformes não sejam considerados verdadeiros primatas por muitos especialistas, eles representam um estágio crucial na transição evolutiva.</p>
+
+            <p>Os primeiros primatas verdadeiros (ordem Primates) surgiram no Eoceno (cerca de 55 milhões de anos atrás) e se diversificaram rapidamente. Esses primatas primitivos incluíam grupos como os adapiformes (semelhantes aos lêmures) e os omomyiformes (relacionados aos társios), que já apresentavam adaptações típicas da vida arborícola, como dedos prensíveis e visão estereoscópica.</p>
+
+            <p>A ordem Primates acabou se dividindo em dois grandes ramos:</p>
+
+            <p>Strepsirrhini (“focinho curvado”) inclui os lêmures, loris e gálagos, com maior dependência do olfato.</p>
+
+            <p>Haplorhini (“focinho simples”) inclui társios, macacos e grandes primatas, com foco maior na visão e cérebros mais desenvolvidos.</p>
+
+            <p>Dentro do grupo Haplorhini, os Simiiformes (macacos e grandes símios) surgiram há cerca de 40 milhões de anos. Esses se subdividiram em dois grandes ramos:</p>
+
+            <p>Os Platyrrhini (macacos do Novo Mundo), que migraram para a América do Sul provavelmente por balsas naturais vindas da África.</p>
+
+            <p>E os Catarrhini (macacos do Velho Mundo e hominídeos), que deram origem, eventualmente, à família Hominidae, da qual os humanos são os únicos membros vivos do gênero Homo.</p>
+
+            <p>O ramo humano divergiu do ancestral comum com os chimpanzés há cerca de 6 a 7 milhões de anos, marcando o início da linhagem dos hominíneos. Desde então, a evolução dos primatas tem sido marcada por aumentos no tamanho cerebral, mudanças no comportamento social e uso cada vez mais complexo de ferramentas.</p>
+
+
+            <h3>Características físicas</h3>
+
+            <p>Os primatas variam muito em tamanho, forma e aparência, indo do pequeno lêmure-rato (Microcebus) de Madagascar, com cerca de 30 gramas, até o gorila-das-montanhas (Gorilla beringei beringei), que pode ultrapassar 180 kg. Apesar dessa diversidade, eles compartilham algumas características anatômicas: visão binocular frontal, unhas em vez de garras (com exceções), presença de polegar opositor (mais ou menos desenvolvido), grande mobilidade nos membros e encéfalo proporcionalmente grande em relação ao corpo.
+
+            <p>A dentição também é bastante variada, refletindo a diversidade alimentar do grupo. Primatas têm geralmente um focinho mais curto do que outros mamíferos, favorecendo a visão em detrimento do olfato, algo particular evidente nos primatas da subordem Haplorhini.</p>
+
+            <h3>Comportamento e organização social</h3>
+
+            <p>Os primatas são conhecidos por seus comportamentos sociais complexos, uso de ferramentas, aprendizagem por observação e comunicação sofisticada. Eles exibem uma grande variedade de sistemas sociais: desde espécies solitárias, como alguns lêmures, até grupos altamente estruturados e cooperativos, como os encontrados entre os chimpanzés e babuínos.</p>
+
+            <p>A interação social em muitos primatas envolve cuidado parental, formação de coalizões, alianças políticas, brincadeiras e uso de gestos, expressões faciais e vocalizações para se comunicar. Essas características fazem dos primatas um dos grupos mais estudados em áreas como etologia, psicologia comparada e antropologia evolutiva.</p>
+
+            <h3>Alimentação</h3>
+
+            <p>A dieta dos primatas é extremamente variada e adaptável, dependendo da espécie e do ambiente. Muitos são frugívoros (comedores de frutas), enquanto outros são folívoros, insetívoros, onívoros ou até carnívoros ocasionais. Macacos-prego, por exemplo, são conhecidos por seu comportamento de quebra de nozes com ferramentas, enquanto gorilas consomem grandes quantidades de folhas e galhos.</p>
+
+            <p>A diversidade alimentar contribui para a ampla distribuição ecológica da ordem e influencia diretamente o comportamento, o uso do espaço e a estrutura social das diferentes espécies.</p>
+
+            <h3>Reprodução</h3>
+
+            <p>A reprodução entre os primatas também varia bastante. O ciclo reprodutivo pode ser sazonal ou contínuo, dependendo da espécie e do ambiente. Em geral, os primatas têm um número reduzido de filhotes, longos períodos de gestação e cuidado parental prolongado, o que favorece o aprendizado e a transmissão de comportamentos culturais.</p>
+
+            <p>Fêmeas de muitas espécies exibem sinais visuais de receptividade sexual (como inchaços glúteos), e o sistema reprodutivo pode ser monogâmico, poligínico ou até promíscuo. Os primatas são notáveis pelo envolvimento social na criação dos filhotes, com algumas espécies demonstrando até mesmo cuidados cooperativos.</p>
+
+            <h3>Expectativa de vida</h3>
+
+            <p>A expectativa de vida dos primatas varia com o tamanho, espécie e ambiente. Pequenos lêmures podem viver cerca de 10 a 15 anos, enquanto grandes símios, como os orangotangos e gorilas, podem atingir mais de 40 anos na natureza. Em cativeiro, com ausência de predadores e cuidados médicos, primatas frequentemente vivem por períodos ainda mais longos.</p>
+
+            <p>O prolongado tempo de vida está diretamente relacionado ao desenvolvimento cognitivo e à complexidade social desses animais, permitindo longos períodos de aprendizagem e maturação.</p>
+
+            <h3>Curiosidades e importância cultural</h3>
+
+            <p>Os primatas têm sido figuras centrais em mitologias, religiões e culturas humanas ao longo da história. Macacos aparecem em lendas hindus, como o deus Hanuman, e em contos africanos e asiáticos como símbolos de inteligência, travessura ou sabedoria. Em sociedades contemporâneas, primatas são frequentemente estudados para compreender a evolução humana, e muitos deles estão no centro de debates sobre direitos animais, conservação e ética.</p>
+
+            <p>Infelizmente, muitas espécies de primatas estão atualmente ameaçadas de extinção devido à destruição de habitats, caça, tráfico e mudanças climáticas. A conservação desses animais é uma prioridade para biólogos e organizações ambientais em todo o mundo, pois sua perda representa não apenas um dano ecológico, mas também uma perda científica, cultural e ética significativa.</p>
+        </main>
+    </div>
+</main>
+
+</body>
+</html>

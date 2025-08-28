@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="arquivos/logo.png"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babuíno-sagrado - Faunapedia</title>
+    <style>
+        /* Estilos gerais para um visual minimalista */
+        body {
+            font-family: Segoe UI;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+        }
+
+        /* --- ESTILOS DO CABEÇALHO --- */
+        .site-header {
+            background-color: #065225;
+            color: white;
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .site-title-link {
+            text-decoration: none;
+            color: inherit;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+        
+        .search-form {
+            flex-grow: 1; 
+            display: flex;
+            justify-content: center; 
+        }
+
+        .search-form input {
+            width: 80%;
+            max-width: 450px;
+            padding: 9.6px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* --- WRAPPER PARA O CONTEÚDO --- */
+        .page-content {
+            padding: 32px;
+        }
+
+        /* Container principal para o layout de duas colunas */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            /* --- ESTA É A CORREÇÃO CRUCIAL --- */
+            display: flow-root; /* Garante que o container contenha o float */
+        }
+
+        /* Caixa da esquerda */
+        .sidebar {
+            width: 280px;
+            background-color: #ffffff;
+            padding: 24px;            
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            float: left; 
+            margin-right: 32px;
+            margin-bottom: 24px;
+        }
+        
+        .animal-foto {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .sidebar img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .sidebar h2 {
+            margin-top: 16px;
+            margin-bottom: 0.16px;
+            font-size: 24px;
+        }
+        .sidebar .family-name {
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-size: 19.2px;
+            color: #555;
+        }
+        .taxonomy-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;           
+        }
+        .taxonomy-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 4.8px 0;
+            border-bottom: 1px solid #ddd;
+            font-size: 14.4px;
+            color: #2b5737;
+        }
+        .taxonomy-list li span:last-child {
+            font-weight: bold;
+        }
+
+        .taxonomy-list a {
+    text-decoration: none;
+    
+}
+       
+        .main-content p, .main-content h3 {
+             margin-top: 0; /* Evita margens estranhas no topo do texto */
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+     <a href="pagina.html" class="site-title-link" >Faunapedia</a>
+    <form class="search-form">
+        <input type="search" placeholder="Pesquisar...">
+    </form>
+</header>
+
+<main class="page-content">
+    <div class="container">
+        <!-- Coluna da Esquerda com a Caixa Cinza -->
+        <aside class="sidebar">
+           <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/94523007/medium.jpg" alt="Foto de um babuíno" class="animal-foto">
+           
+            <h2>Babuíno-sagrado</h2>
+            <em><p class="family-name">Papio hamadryas</p></em>
+            <p>Estado de Conservação:<br>
+                <span style="background-color: #6bc987;  font-weight: bold;">Pouco Preocupante</span>
+            </p>
+            <ul class="taxonomy-list">
+                <li><span>Domínio:</span> <span>Eukaryota</span></li>
+                <li><span>Reino:</span> <span>Animalia</span></li>
+                <li><span>Filo:</span> <span>Chordata</span></li>
+                <li><span>Classe:</span> <a href="mammalia.html"><span>Mammalia</a></span></li>
+                <li><span>Ordem:</span> <span><a href="primates.html">Primates</a></span></li>
+                <li><span>Subordem:</span> <span>Haplorhini</span></li>
+                <li><span>Infraordem:</span> <span>Simiiformes</span></li>
+                <li><span>Família:</span> <span>Cercopithecidae</span></li>
+                <li><span>Gênero:</span> <span><a href="babuino.html"><i>Papio</i></a></span></li>
+                <li><span>Espécie:</span><span><i>P. hamadryas</i></span></li>
+            </ul>
+           <p><b>Região Geográfica:</b></p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Hamadryas_Baboon_area.png" alt="Mapa da distribuição dos babuínos" style="margin-top: 10px;">
+        </aside>
+
+        <!-- Coluna da Direita com o Texto -->
+        <main class="main-content">
+            <h1>Babuíno-sagrado</h1>
+            
+           <p>O babuíno-sagrado, cientificamente conhecido como Papio hamadryas, é uma das cinco espécies de babuínos existentes e se destaca por sua aparência distinta e comportamento social único. Ele é encontrado principalmente nas regiões semiáridas, montanhosas e rochosas do Chifre da África, incluindo países como Etiópia, Eritreia, Djibuti e Somália, além de também viver em partes da Península Arábica, especialmente no Iêmen e sudoeste da Arábia Saudita. Ele é o único babuíno que vive fora do continente africano.</p>
+
+<h3>Características físicas</h3>
+
+<p>O babuíno-sagrado é facilmente reconhecível por sua coloração e formato do corpo. Os machos adultos apresentam uma pelagem longa e prateada em forma de "juba" ao redor da cabeça, ombros e peito, enquanto as fêmeas têm pelagem mais curta e são geralmente marrons. Os machos são significativamente maiores, chegando a pesar entre 20 e 30 kg, enquanto as fêmeas pesam cerca de 10 a 15 kg. Uma característica marcante em ambos os sexos é a área glútea despigmentada e protuberante, típica dos babuínos.</p>
+
+<h3>Comportamento e organização social</h3>
+
+<p>O Papio hamadryas é conhecido por seu sistema social altamente estruturado, considerado um dos mais complexos entre os primatas não humanos. Ele vive em unidades chamadas "harem", formadas por um macho dominante, várias fêmeas e seus filhotes. Vários haréns se agrupam em bandos maiores, que podem conter dezenas ou até centenas de indivíduos.</p>
+
+<p>Esse sistema contrasta com outras espécies de babuínos, que vivem em sociedades mais igualitárias ou baseadas em coalizões masculinas. O comportamento social do babuíno-sagrado tem sido extensamente estudado por etólogos, pois apresenta paralelos interessantes com estruturas sociais humanas.</p>
+
+<h3>Alimentação</h3>
+
+<p>O babuíno-sagrado é onívoro e altamente adaptável. Sua dieta é bastante diversificada e inclui raízes, folhas, sementes, frutas, gramíneas. Além dos alimentos vegetais, ele também consome uma variedade de fontes de proteína animal, como insetos, escorpiões, pequenos répteis, roedores e até filhotes de ave. A busca por alimento pode levá-lo a caminhar grandes distâncias em terrenos áridos e pedregosos.</p>
+
+<h3>Reprodução</h3>
+
+<p>A reprodução no babuíno-sagrado está diretamente ligada à estrutura do harem. O macho dominante geralmente é o único a acasalar com as fêmeas do seu grupo. Após o acasalamento, a fêmea passa por um período de gestação de cerca de seis meses, dando à luz a um único filhote. Os filhotes são amamentados por aproximadamente 6 a 8 meses e permanecem próximos à mãe durante os primeiros anos de vida. As fêmeas atingem a maturidade sexual por volta dos 4 anos, enquanto os machos demoram um pouco mais, entre 5 e 7 anos.</p>
+
+<h3>Expectativa de vida</h3>
+
+<p>Quanto à expectativa de vida, esses primatas podem viver entre 20 e 30 anos em ambientes naturais, embora esse tempo varie conforme as condições do habitat e os riscos de predadores. Em cativeiro, onde recebem cuidados constantes e alimentação adequada, podem viver ainda mais, frequentemente ultrapassando os 30 anos.</p>
+
+<h3>Curiosidades e importância cultural</h3>
+
+<p>O nome "babuíno-sagrado" não é por acaso. No Antigo Egito, essa espécie era considerada sagrada, muitas vezes associada ao deus Thoth, o deus da sabedoria. Estátuas e murais representando esses babuínos foram encontrados em túmulos e templos, indicando que eram reverenciados por sua inteligência e comportamento.</p>
+            
+            
+        </main>
+    </div>
+</main>
+
+</body>
+</html>

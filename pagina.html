@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="arquivos/logo.png"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faunapedia - Seu Catálogo do Mundo Animal</title>
+    <style>
+        /* Estilos gerais e reset */
+        body {
+            font-family: Segoe UI, sans-serif;
+            line-height: 1.6;
+            background-color: #fcfcfc; /* Um cinza claro para o fundo */
+            color: #333;
+            margin: 0;
+        }
+
+        /* --- ESTILOS DO CABEÇALHO --- */
+        .site-header {
+            background-color: #065225;
+            color: white;
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .site-title-link {
+            text-decoration: none;
+            color: inherit;
+             font-size: 30px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+        
+        .search-form {
+            flex-grow: 1; 
+            display: flex;
+            justify-content: center; 
+        }
+
+        .search-form input {
+            width: 80%;
+            max-width: 450px;
+            padding: 9.6px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* --- SEÇÃO DE DESTAQUE (HERO) --- */
+        .hero-section {
+            height: 60vh; /* Ocupa 60% da altura da tela */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('arquivos/tucano.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            
+            /* Centraliza o texto vertical e horizontalmente */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 24px;
+        }
+        
+        .hero-text h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+    
+        }
+        
+        .hero-text p {
+            font-size: 20px;
+            max-width: 600px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+        }
+
+        /* --- SEÇÃO DO CATÁLOGO --- */
+        .catalog-showcase {
+            max-width: 1200px;
+            margin: 48px auto; /* Centraliza e adiciona espaço vertical */
+            padding: 0 32px;
+        }
+
+        .catalog-showcase h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 32px;
+            color: #065225;
+        }
+        
+        /* Grade de animais responsiva */
+        .animal-grid {
+            display: grid;
+            /* Esta linha já faz o que você quer: 4 colunas se houver espaço,
+               e quebra para a próxima linha automaticamente. */
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px; /* Espaço entre as caixas */
+        }
+        
+        /* Estilo de cada caixa (card) de animal */
+        .animal-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Garante que a imagem não passe das bordas arredondadas */
+            text-decoration: none;
+            color: #333;
+            display: block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .animal-card:hover {
+            transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .animal-card-img {
+            width: 100%;
+            height: 180px; /* Altura fixa para todas as imagens */
+            object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+        }
+
+        .animal-card-name {
+            font-size: 18px;
+            font-weight: bold;
+            padding: 16px;
+            margin: 0;
+            text-align: center;
+        }
+        
+        
+        .rodapé {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 24px;
+            margin-top: 48px;
+        }
+
+        .titulo {
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+.subtitulo {
+            font-weight: 200;
+
+        }
+.subtitulo2 {
+            font-weight: lighter;
+
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <a href="#" class="site-title-link">Faunapedia</a>
+    <form class="search-form">
+        <input type="search" placeholder="Pesquisar animais...">
+    </form>
+</header>
+
+<main>
+    <!-- Seção de destaque com imagem e texto -->
+    <div class="hero-section">
+        <div class="hero-text">
+            <h1><span class="subtitulo">Bem-vindo ao </span><span class="titulo">Faunapedia</span></h1>
+            <h2 class="subtitulo2">Aprender sobre animais nunca foi tão fácil</h2>
+        </div>
+    </div>
+
+    <!-- Seção do catálogo de animais -->
+    <section class="catalog-showcase">
+        <h2>Explore as Espécies</h2>
+        <div class="animal-grid">
+            
+            <!-- Exemplo de caixa de animal -->
+            <a href="#" class="animal-card">
+                <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=500&h=500&fit=crop" alt="Tigre" class="animal-card-img">
+                <h3 class="animal-card-name">Urso Panda</h3>
+            </a>
+
+            <!-- Exemplo de caixa de animal -->
+            <a href="babuino.html" class="animal-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Olive_baboon_Ngorongoro.jpg/800px-Olive_baboon_Ngorongoro.jpg" alt="Babúino" class="animal-card-img">
+                <h3 class="animal-card-name">Babúino</h3>
+            </a>
+
+            <!-- Exemplo de caixa de animal -->
+            <a href="leao.html" class="animal-card">
+                <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/nationalgeographic_2788792_0.webp?w=1600&h=900" alt="Lobo" class="animal-card-img">
+                <h3 class="animal-card-name">Leão</h3>
+            </a>
+
+            <!-- Exemplo de caixa de animal -->
+            <a href="#" class="animal-card">
+                <img src="https://static.todamateria.com.br/upload/tu/ba/tubaraobranco-cke.jpg" alt="Sapo" class="animal-card-img">
+                <h3 class="animal-card-name">Tubarão-Branco</h3>
+            </a>
+            
+            <!-- Adicione mais caixas de animais aqui, elas irão para a linha de baixo -->
+            <a href="#" class="animal-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Vulpes_vulpes_ssp_fulvus.jpg/960px-Vulpes_vulpes_ssp_fulvus.jpg" alt="Raposa" class="animal-card-img">
+                <h3 class="animal-card-name">Raposa-vermelha</h3>
+            </a>
+
+            <a href="#" class="animal-card">
+                <img src="https://www.iguiecologia.com/wp-content/uploads/2021/02/Coruja-buraqueira7-2.jpg" alt="Coruja" class="animal-card-img">
+                <h3 class="animal-card-name">Coruja</h3>
+            </a>
+
+            <a href="#" class="animal-card">
+                <img src="https://static.escolakids.uol.com.br/conteudo_legenda/a-arara-azul-uma-ave-familia-dos-psitacideos-5c8a3e0c53ef2.jpg" alt="Arara" class="animal-card-img">
+                <h3 class="animal-card-name">Arara Azul</h3>
+            </a>
+
+            <a href="#" class="animal-card">
+                <img src="https://www.infoescola.com/wp-content/uploads/2008/05/tartaruga-verde-112466255.jpg" alt="Tartaruga" class="animal-card-img">
+                <h3 class="animal-card-name">Tartaruga-marinha</h3>
+            </a>
+
+            <a href="#" class="animal-card">
+                <img src="https://wallpapers.com/images/featured/fundo-de-porco-2kxvovs7ay2wjg2u.jpg" alt="porco" class="animal-card-img">
+                <h3 class="animal-card-name">Porco</h3>
+            </a>
+
+            <a href="#" class="animal-card">
+                <img src="https://img.freepik.com/fotos-gratis/elefante-bonito-em-um-caminho-de-cascalho-cercado-de-grama-verde-e-arvores_181624-23979.jpg" alt="porco" class="animal-card-img">
+                <h3 class="animal-card-name">Elefante</h3>
+            </a>
+
+            <a href="#" class="animal-card">
+                <img src="https://i0.wp.com/revistaamazonia.com.br/wp-content/uploads/2025/05/Cascavel-4-sinais-para-identificar-a-presenca-da-cobra-antes-que-seja-tarde-1.webp" alt="porco" class="animal-card-img">
+                <h3 class="animal-card-name">Cascavel</h3>
+            </a>
+
+            <a href="#" class="animal-card">
+                <img src="https://content.nationalgeographic.pt/medio/2024/09/18/urso-pardo_8c6b01df_14318_240918161417_1280x853.jpg" alt="porco" class="animal-card-img">
+                <h3 class="animal-card-name">Urso-pardo</h3>
+            </a>
+
+            <a href="#" class="animal-card">
+                <img src="https://content.nationalgeographic.pt/medio/2025/01/10/dromedarios_5464acc9_250110103422_1280x960.webp" alt="porco" class="animal-card-img">
+                <h3 class="animal-card-name">Camelo</h3>
+            </a>
+
+            <a href="#" class="animal-card">
+                <img src="https://images.unsplash.com/photo-1704805566048-c87c39bbcf11?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZlc3RydXp8ZW58MHx8MHx8fDA%3D" alt="porco" class="animal-card-img">
+                <h3 class="animal-card-name">Avestruz</h3>
+            </a>
+
+             <a href="#" class="animal-card">
+                <img src="https://sospantanal.org.br/wp-content/uploads/2024/12/sos_pantanal_jacare-do-pantanal-1-de-1-1.webp" alt="jacaré" class="animal-card-img">
+                <h3 class="animal-card-name">Jacaré</h3>
+            </a>
+
+            <a href="#" class="animal-card">
+                <img src="https://www.weasy.com.br/cdn/shop/articles/d89ab54465c0299f5b7f2d0c822351ca_540x_c524efb4-c3fd-45cb-bf22-f900d2476f6f.png?v=1651598286" alt="coelho" class="animal-card-img">
+                <h3 class="animal-card-name">Coelho</h3>
+            </a>
+
+        </div>
+    </section>
+</main>
+
+<footer class="rodapé">
+    <p>&copy; 2025 Faunapedia. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>

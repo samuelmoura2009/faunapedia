@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="arquivos/logo.png"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hominídeos - Faunapedia</title>
+    <style>
+        /* Estilos gerais para um visual minimalista */
+        body {
+            font-family: Segoe UI;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+        }
+
+        /* --- ESTILOS DO CABEÇALHO --- */
+        .site-header {
+            background-color: #065225;
+            color: white;
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .site-title-link {
+            text-decoration: none;
+            color: inherit;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+        
+        .search-form {
+            flex-grow: 1; 
+            display: flex;
+            justify-content: center; 
+        }
+
+        .search-form input {
+            width: 80%;
+            max-width: 450px;
+            padding: 9.6px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* --- WRAPPER PARA O CONTEÚDO --- */
+        .page-content {
+            padding: 32px;
+        }
+
+        /* Container principal para o layout de duas colunas */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            /* --- ESTA É A CORREÇÃO CRUCIAL --- */
+            display: flow-root; /* Garante que o container contenha o float */
+        }
+
+        /* Caixa da esquerda */
+        .sidebar {
+            width: 280px;
+            background-color: #ffffff;
+            padding: 24px;            
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            float: left; 
+            margin-right: 32px;
+            margin-bottom: 24px;
+        }
+        
+        .animal-foto {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .sidebar img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .sidebar h2 {
+            margin-top: 16px;
+            margin-bottom: 0.16px;
+            font-size: 24px;
+        }
+        .sidebar .family-name {
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-size: 19.2px;
+            color: #555;
+        }
+        .taxonomy-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+        .taxonomy-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 4.8px 0;
+            border-bottom: 1px solid #ddd;
+            font-size: 14.4px;
+            color: #2b5737;
+        }
+        .taxonomy-list li span:last-child {
+            font-weight: bold;
+        }
+
+        .lista-especies {
+            text-align: left;
+            padding-left: 16px;
+            list-style-type: disc;
+        }
+
+        /* NOVO ESTILO ADICIONADO PARA O ANINHAMENTO */
+        .lista-especies ul {
+            padding-left: 15px; /* Adiciona recuo para sub-listas */
+            margin-top: 4px;
+            list-style-type: disc;
+        }
+
+        .lista-especies a {
+         text-decoration: none;
+        }
+
+        .taxonomy-list a {
+            text-decoration: none;
+        }
+       
+        .main-content p, .main-content h3 {
+             margin-top: 0; /* Evita margens estranhas no topo do texto */
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <a href="pagina.html" class="site-title-link" >Faunapedia</a>
+    <form class="search-form">
+        <input type="search" placeholder="Pesquisar...">
+    </form>
+</header>
+
+<main class="page-content">
+    <div class="container">
+        <!-- Coluna da Esquerda com a Caixa Cinza -->
+        <aside class="sidebar">
+           <img src="arquivos/macacos.png" alt="Foto de primatas" class="animal-foto">
+           
+            <h2>Hominídeos</h2>
+            <em><p class="family-name">Hominidae</p></em>
+            
+            <ul class="taxonomy-list">
+                <li><span>Domínio:</span> <span>Eukaryota</span></li>
+                <li><span>Reino:</span> <span>Animalia</span></li>
+                <li><span>Filo:</span> <span>Chordata</span></li>
+                <li><span>Classe:</span> <a href="mammalia.html"><span>Mammalia</a></span></li>
+                <li><span>Ordem:</span> <a href="primates.html"><span>Primates</a></span></li>              
+                <li><span>Subordem:</span> <span>Haplorhini</span></li>
+                <li><span>Infraordem:</span> <span>Simiiformes</span></li>
+                <li><span>Parvodem:</span> <span>Catarrhini</span></li>
+                <li><span>Superfamília:</span> <span>Hominoidea</span></li>
+                <li><span>Família:</span> <span>Hominidae</span></li>
+            </ul>
+           <p><b>Região Geográfica:</b></p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Distribution_of_the_Great_Apes.png" alt="Mapa da distribuição dos babuínos" style="margin-top: 10px;">
+           
+            <p><b>Gêneros:</b></p>
+            
+            <!-- LISTA REESTRUTURADA -->
+            <ul class="lista-especies">
+                <li>Gênero Pan
+                    <ul>
+                        <li>Pan troglodytes</li>
+                        <li>Pan paniscus</li>
+                    </ul>
+                </li>
+
+                <li>Gênero Gorilla
+                    <ul>
+                        <li>Gorilla gorilla</li>
+                        <li>Gorilla beringei</li>
+                    </ul>
+                </li>
+                <li>Gênero Pongo
+                    <ul>
+                        <li>Pongo pygmaeus</li>
+                        <li>Pongo abelii</li>
+                        <li>Pongo tapanuliensis</li>
+                    </ul>
+                </li>
+                <li>Gênero Homo
+                    <ul>
+                        <li><a href="homosapiens.html">Homo Sapiens</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- FIM DA LISTA REESTRUTURADA -->
+
+        </aside>
+
+        <!-- Coluna da Direita com o Texto -->
+        <main class="main-content">
+            <h1>Hominídeos</h1>
+            
+            <p>Os hominídeos pertencem à família biológica Hominidae, que inclui os seres humanos modernos, os chimpanzés, os gorilas, os orangotangos e várias espécies extintas. Esses animais são os maiores primatas existentes e compartilham uma série de características em comum, como um cérebro relativamente grande, comportamentos sociais complexos, uso de ferramentas e diferentes formas de comunicação.</p>
+
+            <p>A história evolutiva dos hominídeos começou há cerca de 14 a 18 milhões de anos, quando um ancestral comum deu origem aos diversos ramos dessa família. Os primeiros a se separar dessa linhagem foram os orangotangos, seguidos pelos gorilas. Por fim, os chimpanzés se distanciaram evolutivamente dos hominíneos, grupo que inclui os seres humanos e seus ancestrais diretos. Essa separação entre humanos e chimpanzés teria ocorrido há cerca de 6 a 7 milhões de anos.</p>
+
+            <p>O gênero Homo, ao qual pertence o ser humano moderno (Homo sapiens), representa um dos ramos mais recentes da evolução dos hominídeos. Esse gênero também inclui espécies extintas como Homo habilis, Homo erectus e Homo neanderthalensis. As espécies do gênero Homo apresentam avanços significativos em relação a seus antepassados, como o uso sistemático de ferramentas, o aumento do tamanho do cérebro, a postura bípede e o surgimento de comportamentos sociais, culturais e simbólicos mais complexos.</p>
+
+            <p>De modo geral, os hominídeos compartilham características anatômicas e comportamentais importantes. Eles possuem corpos robustos, braços longos (especialmente em gorilas e orangotangos), cérebros desenvolvidos e uma notável capacidade de aprendizado. A locomoção varia entre os grupos, podendo ser quadrúpede ou bípede, como no caso dos humanos.</p>
+
+            <p>A distribuição geográfica dos hominídeos, com exceção dos humanos, está restrita às regiões tropicais da África e do Sudeste Asiático. Os orangotangos vivem nas ilhas de Bornéu e Sumatra, enquanto gorilas e chimpanzés habitam florestas tropicais da África central e ocidental. Já os humanos se expandiram por praticamente todo o planeta, ocupando os mais diversos ecossistemas.</p>
+
+            <p>Infelizmente, muitas espécies de hominídeos estão atualmente ameaçadas de extinção. A destruição de seus habitats, a caça ilegal, o tráfico de animais e as mudanças climáticas são os principais fatores de risco. A conservação desses animais é fundamental não apenas para manter o equilíbrio ecológico, mas também porque eles são nossos parentes mais próximos e representam um importante elo na compreensão da história evolutiva dos seres humanos.</p>
+
+            <p>Além de sua importância biológica, os hominídeos despertam grande interesse científico e ético. O estudo desses primatas fornece informações valiosas sobre a origem da nossa espécie e sobre os processos que moldaram o comportamento humano. Ao mesmo tempo, a proximidade genética e comportamental com esses animais levanta questões éticas importantes sobre como os tratamos, especialmente em relação à pesquisa, ao cativeiro e à preservação de seu ambiente natural.</p>
+        </main>
+    </div>
+</main>
+
+</body>
+</html>
